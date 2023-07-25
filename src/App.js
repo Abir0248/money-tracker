@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom"; // Note the change here: Switch is replaced with Routes
 import Income from "./Income";
 import Expenses from "./Expenses";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,14 +30,10 @@ function App() {
           </div>
         </nav>
 
-        <Switch>
-          <Route path="/income">
-            <Income />
-          </Route>
-          <Route path="/expenses">
-            <Expenses />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/income" element={<Income />} />
+          <Route path="/expenses" element={<Expenses />} />
+        </Routes>
       </div>
     </Router>
   );
