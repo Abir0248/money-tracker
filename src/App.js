@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Income from "./components/Income";
-import Expenses from "./components/Expenses";
+import Income from "./Income";
+import Expenses from "./Expenses";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
